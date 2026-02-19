@@ -11,8 +11,6 @@
         max-width: 100%; 
         box-sizing: border-box;
 }
-
-
 .contacto {
         text-align: center;
 }
@@ -93,20 +91,65 @@
         }
         .asignaturas-card {
             padding: 20px;
-            border-radius: 10px;
+            border-radius: 50px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            font-weight: bold;
+            display:block;
+            text-decoration: none;
+            color: inherit;
         }
 
         /* Asignaturas */
-            .html {
-                border-left: 25px solid #df8237
+        .asignatura {
+            position: relative;
+            overflow: hidden;
+            background-color: white;
             }
-            .sql{
-                border-left: 25px solid #216db4
+
+        /* Capa animada */
+            .asignatura::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0.2;
+            transition: width 0.3s ease;
+            z-index: 0;
             }
-            .redes{
-                border-left: 25px solid #33df7a
+
+        /* Animación */
+            .asignatura:hover::before {
+            width: 85%;
             }
+
+        /* Texto siempre por encima */
+            .asignatura h3,
+            .asignatura p {
+            position: relative;
+            z-index: 1;
+            }
+
+        .html::before {
+            background-image: url("./img/html-5.png");
+            }
+
+        .sql::before {
+            background-image: url("./img/sql.png");
+            }
+
+        .redes::before {
+            background-image: url("./img/redes.png");
+            }
+
+        .ing::before {
+            background-image: url("./img/ing.png");
+            }
+
+
 
         /* Botón */
         .btn-acceder {
