@@ -1,0 +1,166 @@
+<html>
+<head>
+    <title>WEB E2T</title>
+    <link href="../styles.css" rel="stylesheet"/>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <title>Apuntes y otras cosas | Especialidad de 2 tramo</title>
+
+    <nav>
+        <a href="../index.html#inicio">Inicio</a>
+        <a href="../index.html#curso">Curso</a>
+        <a href="../index.html#asignaturas">Asignaturas</a>
+        <a href="../index.html#contacto">Contacto</a>
+    </nav>
+
+    <h1 class="robado">Contenido <B>ROBADO</B> del repositorio de <a href="https://github.com/13sauca13/PRG/">13sauca13</a></h1>
+    <div class="apuntes">
+        <h5>HTML</h5>
+        <p>
+        HTML es un lenguaje de marcado para páginas web.</br>
+        La estructura básica de un fichero HTML es la siguiente:
+        </p>
+<!--  INICIO METACODIGO HTML-->           
+            <pre class="codigo">
+&lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+        &lt;head&gt;
+            &lt;title&gt;Titulo de la página&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            Cuerpo de la página
+        &lt;/body&gt;
+    &lt;/html&gt;
+            </pre>
+<!--  FIN METACODIGO HTML-->
+            <p><b>&lt;!DOCTYPE html&gt;</b> Indica que es un archivo HTML5.<br>
+            <b>&lt;html&gt;</b> Es el elemento raiz de la página.<br>
+            <b>&lt;head&gt;</b> Contiene informacion sobre la página.<br>
+            <b>&lt;title&gt;</b> Especifica el título de la página (se verá en la pestaña del navegador).<br>
+            <b>&lt;body&gt;</b> Define el cuerpo del documento, contiene todos los elementos visibles como cabeceras, párrafos, imágenes, enlaces, tablas, listas...
+            Cada etiqueta se abre y posteriormente se cierra con <b>&lt;/etiqueta&gt;</b>b> (*Excepto <b>&lt;br/&gt;</b> y <b>&lt;img ... /&gt;</b> y alguna más).</br>
+
+            Para introducir comentarios en el código se utiliza: <br>
+
+            <b>&lt;!-- Comentarios --&gt;</b><br>
+            Tip
+
+            Todas las etiquetas pueden tener un id para poder referenciarlas en los estilos o en caso de ser necesario pero los is deben ser únicos:
+
+            &lt;etiqueta id="nombre_id"&gt; contenido &lt;/etiqueta&gt;
+            1.Formato de contenido
+            Para dar fomato al texto podemos utilizar:
+
+            Encabezados: &lt;hX&gt; Texto &lt;/hX&gt; siendo x un número del 1 al 6 (tiene jerarquía. 1 es la más alta y 6 la más baja)
+            Párrafos: &lt;p&gt; Texto del párrafo &lt;/p&gt;
+            Listas: Hay dos tipos:
+            Ordenadas: &lt;ol&gt; &lt;li&gt;Elemento&lt;/li&gt; &lt;li&gt;Elemento2&lt;/li&gt;... &lt;/ol&gt; (cada elemento de la lista va numerado)
+            Desordenadas: &lt;ul&gt; &lt;li&gt;Elemento&lt;/li&gt; &lt;li&gt;Elemento2&lt;/li&gt;... &lt;/ul&gt; (lista de "puntos")
+            Enlaces
+            &lt;a href="ruta_enlace"&gt;Texto mostrado&lt;/a&gt;
+            A los enlaces se les puede añadir también target="atributo" para especificar como se abrirá el enlace:
+
+            _blank Abre en una nueva ventana o pestaña (según el navegador)
+            _self Abre en la misma pestaña en la que se pulsó (esta es la opción por defecto)
+            _parent Abre en la ventana padre
+            _top Abre en una ventana completa
+            Imágenes
+            Para introducir imágenes se utiliza la etiqueta:
+
+            &lt;img src="ruta_imagen"/&gt;
+            Tablas
+            Para crear una tabla se usa la etiqueta &lt;table&gt;:
+            </p>
+<!--  INICIO METACODIGO HTML-->           
+            <pre class="codigo">
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Cabecera_columna1&lt;th&gt;
+        &lt;th&gt;Cabecera_columna2&lt;th&gt;
+        ...
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Contenido&lt;/td&gt;
+        &lt;td&gt;Contenido&lt;/td&gt;
+        ...
+    &lt;/tr&gt;
+    ...
+&lt;/table&gt;
+                        </pre>
+<!--  FIN METACODIGO HTML-->
+            Cada &lt;tr&gt; tendrá una fila de la tabla (Table Row), la primera tendrá dentro th, cabeceras (Table Header) y las siguientes td (Table Data).
+
+            Para combinar celdas se usa dentro de la etiqueta de la primera celda el atributo colspan=x siendp x el número de celdas en adelante que se combinarán o rowspan para combinar filas.
+
+            &lt;hr/&gt;
+            Horizontal Rule, introduce una raya horizontal
+
+            &lt;pre&gt;
+            Lo que esté dentro de la eqtiqueta &lt;pre&gt; se considera que viene preformateado y HTML no le hará nada.
+
+            Se utiliza para introducir bloques de código.
+
+            &lt;div&gt;
+            2.CSS
+            El CSS se usa para controlar el estilo de las páginas sin tener que usarlo en el propio HTML. CSS se puede usar de tres formas:
+
+            En linea
+            En la propia línea de HTML:
+
+            &lt;etiqueta style="propiedad:valor";&gt; contenido &lt;/etiqueta&gt;
+            Interno
+            Desde &lt;head&gt; para aplicar a lo largo de la página:
+
+            &lt;head&gt;
+            &lt;style&gt;
+                .nombre_estilo {
+                    propiedad:valor;
+                    propiedad2:valor2;
+                    ...
+                }
+            &lt;/style&gt;
+            &lt;/head&gt;
+            El nombre del estilo sería .nombre_estilo para crear una clase de estilo o pueden utilizarse sin . si se va a utilizar una etiqueta existente de HTML (o varias) o para un id (utilizando #nombre_id) para modificar su estilo por defecto:
+
+            &lt;head&gt;
+            &lt;style&gt;
+                etiqueta, etiqueta2... {
+                    propiedad:valor;
+                    propiedad2:valor2;
+                    ...
+                }
+            &lt;/style&gt;
+            &lt;/head&gt;
+            Para aplicar el estilo (de los que no modifican las propias etiquetas): &lt;etiqueta class="nombre_estilo"&gt; contenido &lt;/etiqueta&gt;
+
+            Externo
+            Desde un archivo externo con la extensión .css. De esta manera podríamos tener una hoja de estilo común para todas las páginas de una web.
+
+            &lt;head&gt;
+                &lt;link href="nombre_archivo.css" rel="stylesheet"/&gt;
+            &lt;/head&gt;
+            Usos
+            🔗Regla !important
+
+            🔗Media Queries
+
+            3.Frameworks CSS
+            Un framework es una plantilla para desarrollar software.
+
+            Usaremos Bootstrap
+    </div>
+
+     <section id ="contacto" class="contacto">
+        <h2>¿Tienes dudas?</h2>
+        <p>El primer paso es reconocer que no tienes ni idea</p>
+        <a class="btn-contacto">
+            📩 Haz clic aquí para enviarme un mensaje
+        </a>
+    </section>
+
+    <footer>
+        <p>2025-2026 Promoción de la E2T en Técnicas de Apoyo CIS-TIC - Escuela de Especialidades Antonio de Escaño</p>
+    </footer>
+</body>
+</html>
