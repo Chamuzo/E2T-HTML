@@ -1,0 +1,164 @@
+<html>
+<head>
+    <title>WEB E2T</title>
+    <link href="../styles.css" rel="stylesheet"/>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <title>Apuntes y otras cosas | Especialidad de 2 tramo</title>
+
+    <nav>
+        <a href="../index.html#inicio">Inicio</a>
+        <a href="../index.html#curso">Curso</a>
+        <a href="../index.html#asignaturas">Asignaturas</a>
+        <a href="../index.html#contacto">Contacto</a>
+    </nav>
+
+    <h1 class="robado">Contenido <B>ROBADO</B> del repositorio de <a href="https://github.com/13sauca13/PRG/" target="_blank">13sauca13</a></h1>
+    
+    <div class="apuntes">
+        <h2>HTML</h2>
+        <p>HTML es un lenguaje de marcado para páginas web.<br>
+        La estructura básica de un fichero HTML es la siguiente:</p>
+
+<pre class="codigo">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Titulo de la página&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        Cuerpo de la página
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<ul>
+            <li><b>&lt;!DOCTYPE html&gt;</b>: Indica que es un archivo HTML5.</li>
+            <li><b>&lt;html&gt;</b>: Es el elemento raíz de la página.</li>
+            <li><b>&lt;head&gt;</b>: Contiene información sobre la página.</li>
+            <li><b>&lt;title&gt;</b>: Especifica el título de la página (se verá en la pestaña del navegador).</li>
+            <li><b>&lt;body&gt;</b>: Define el cuerpo del documento, contiene todos los elementos visibles como cabeceras, párrafos, imágenes, enlaces, tablas, listas...</li>
+        </ul>
+        
+        <p>Cada etiqueta se abre y posteriormente se cierra con <b>&lt;/etiqueta&gt;</b> (*Excepto <code>&lt;br/&gt;</code>, <code>&lt;img ... /&gt;</code> y alguna más).</p>
+
+        <p>Para introducir comentarios en el código se utiliza:<br>
+        <code>&lt;!-- Comentarios --&gt;</code></p>
+
+        <blockquote>
+            <b>Tip:</b> Todas las etiquetas pueden tener un <code>id</code> para poder referenciarlas en los estilos o en caso de ser necesario, pero los ids deben ser únicos:<br><br>
+            <code>&lt;etiqueta id="nombre_id"&gt; contenido &lt;/etiqueta&gt;</code>
+        </blockquote>
+
+        <hr/>
+
+        <h3>1. Formato de contenido</h3>
+        <p>Para dar formato al texto podemos utilizar:</p>
+        
+        <ul>
+            <li><b>Encabezados:</b> <code>&lt;hX&gt; Texto &lt;/hX&gt;</code> siendo X un número del 1 al 6 (tiene jerarquía. 1 es la más alta y 6 la más baja).</li>
+            <li><b>Párrafos:</b> <code>&lt;p&gt; Texto del párrafo &lt;/p&gt;</code></li>
+            <li><b>Listas:</b> Hay dos tipos:
+                <ul>
+                    <li><b>Ordenadas:</b> <code>&lt;ol&gt; &lt;li&gt;Elemento&lt;/li&gt; &lt;li&gt;Elemento2&lt;/li&gt; &lt;/ol&gt;</code> (cada elemento va numerado).</li>
+                    <li><b>Desordenadas:</b> <code>&lt;ul&gt; &lt;li&gt;Elemento&lt;/li&gt; &lt;li&gt;Elemento2&lt;/li&gt; &lt;/ul&gt;</code> (lista de "puntos").</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h4>Enlaces</h4>
+        <p><code>&lt;a href="ruta_enlace"&gt;Texto mostrado&lt;/a&gt;</code></p>
+        <p>A los enlaces se les puede añadir también <code>target="atributo"</code> para especificar cómo se abrirá el enlace:</p>
+        <ul>
+            <li><b>_blank</b>: Abre en una nueva ventana o pestaña (según el navegador).</li>
+            <li><b>_self</b>: Abre en la misma pestaña en la que se pulsó (esta es la opción por defecto).</li>
+            <li><b>_parent</b>: Abre en la ventana padre.</li>
+            <li><b>_top</b>: Abre en una ventana completa.</li>
+        </ul>
+
+        <h4>Imágenes</h4>
+        <p>Para introducir imágenes se utiliza la etiqueta:</p>
+        <p><code>&lt;img src="ruta_imagen"/&gt;</code></p>
+
+        <h4>Tablas</h4>
+        <p>Para crear una tabla se usa la etiqueta <code>&lt;table&gt;</code>:</p>
+
+<pre class="codigo">
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Cabecera_columna1&lt;/th&gt;
+        &lt;th&gt;Cabecera_columna2&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Contenido&lt;/td&gt;
+        &lt;td&gt;Contenido&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+<p>Cada <code>&lt;tr&gt;</code> tendrá una fila de la tabla (Table Row), la primera tendrá dentro <code>&lt;th&gt;</code>, cabeceras (Table Header) y las siguientes <code>&lt;td&gt;</code> (Table Data).</p>
+        <p>Para combinar celdas se usa dentro de la etiqueta de la primera celda el atributo <code>colspan="x"</code> siendo x el número de celdas en adelante que se combinarán, o <code>rowspan</code> para combinar filas.</p>
+
+        <h4>Otras etiquetas útiles</h4>
+        <ul>
+            <li><b>&lt;hr/&gt;</b>: Horizontal Rule, introduce una raya horizontal.</li>
+            <li><b>&lt;pre&gt;</b>: Lo que esté dentro de esta etiqueta se considera preformateado y HTML respetará sus espacios y saltos de línea. Se utiliza para bloques de código.</li>
+            <li><b>&lt;div&gt;</b>: Contenedor genérico para agrupar bloques de contenido.</li>
+        </ul>
+
+        <hr/>
+
+        <h3>2. CSS</h3>
+        <p>El CSS se usa para controlar el estilo de las páginas sin tener que ensuciar el propio HTML. CSS se puede usar de tres formas:</p>
+
+        <ul>
+            <li><b>En línea:</b> En la propia línea de HTML.<br>
+            <code>&lt;etiqueta style="propiedad:valor;"&gt; contenido &lt;/etiqueta&gt;</code></li>
+            
+            <li><b>Interno:</b> Desde el <code>&lt;head&gt;</code> para aplicar a lo largo de la página.
+<pre class="codigo">
+&lt;head&gt;
+&lt;style&gt;
+    .nombre_estilo {
+        propiedad:valor;
+    }
+&lt;/style&gt;
+&lt;/head&gt;
+</pre>
+            El nombre del estilo sería <code>.nombre_estilo</code> para crear una clase. Si no lleva punto, se aplica a todas las etiquetas HTML con ese nombre. Si lleva <code>#</code> se aplica a un id específico. Para aplicar la clase: <code>&lt;etiqueta class="nombre_estilo"&gt; contenido &lt;/etiqueta&gt;</code>
+            </li>
+
+            <li><b>Externo:</b> Desde un archivo externo con la extensión <code>.css</code>. De esta manera podríamos tener una hoja de estilo común para todas las páginas de una web.
+<pre class="codigo">
+&lt;head&gt;
+    &lt;link href="nombre_archivo.css" rel="stylesheet"/&gt;
+&lt;/head&gt;
+</pre>
+            </li>
+        </ul>
+
+        <h4>Usos avanzados</h4>
+        <ul>
+            <li>🔗 Regla !important</li>
+            <li>🔗 Media Queries</li>
+        </ul>
+
+        <hr/>
+
+        <h3>3. Frameworks CSS</h3>
+        <p>Un framework es una plantilla para desarrollar software.</p>
+        <p><b>Usaremos Bootstrap.</b></p>
+    </div>
+
+    <section id="contacto" class="contacto">
+        <h2>¿Tienes dudas?</h2>
+        <p>El primer paso es reconocer que no tienes ni idea</p>
+        <a class="btn-contacto">
+            📩 Haz clic aquí para enviarme un mensaje
+        </a>
+    </section>
+
+    <footer>
+        <p>2025-2026 Promoción de la E2T en Técnicas de Apoyo CIS-TIC - Escuela de Especialidades Antonio de Escaño</p>
+    </footer>
+</body>
+</html>
